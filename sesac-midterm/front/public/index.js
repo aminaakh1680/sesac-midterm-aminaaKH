@@ -1,12 +1,15 @@
 /* 1. https://jsonplaceholder.typicode.com/todos 로부터 데이터를 불러와서 추가해주는 함수 getTodos() 선언 */
 // getTodos()는 추후에 HTML DOM 내용이 완전히 로드되었을 때 실행되어야 합니다.
-axios({
-  method: 'GET',
-  url: 'https://jsonplaceholder.typicode.com/todos',
-  params: data
-})
+document.addEventListener("DOMContentLoaded", ()=> {
+  async function getTodos() {}
+    const res = axios.get('https://jsonplaceholder.typicode.com/todos');
+    const todos = res.data;
+    return todos;
+  }
+  
+);
 
-async function getTodos() {}
+
 let toDo = document.querySelector(".")
 /* 
   2. 새로운 입력창의 Todo를 Todo 목록에 추가하고, 입력창을 초기화합니다.
