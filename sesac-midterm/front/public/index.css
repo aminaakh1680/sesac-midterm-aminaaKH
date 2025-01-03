@@ -5,8 +5,42 @@
   --main-bg-color: #e5ffeb;
 }
 
+header {
+  display: flex;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #04c82f;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  width: 100px;
+  height: auto;
+  max-height: 100px;
+}
+.todoList {
+  display: flex;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  display: flex;
+  flex-wrap: nowrap;
+  max-width: 800px;
+}
+
+
+@media screen and (max-width: 540px) {
+  .todoList {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .todoList {
+    flex-wrap: wrap;
+  }
 }

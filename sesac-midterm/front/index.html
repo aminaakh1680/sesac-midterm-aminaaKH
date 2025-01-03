@@ -3,7 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>아미나나</title>
+    <link rel="stylesheet" href="./public/index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>아미나</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div class="header">
+        <img src="./public/codingon.png" class="logo" alt="logo" />
+        <h1>Todo List</h1>
+      </div>
+    </header>
+    <main>
+      <div>
+        <input type="text" name="todo" id="todo" placeholder="today's todo" />
+        <button type="button" class="getTodo" onclick="addTodos()">작성</button>
+        <div class="todoContainer">
+          <div class="todos todo1">1</div>
+          <div class="todos todo2">2</div>
+          <div class="todos todo3">3</div>
+          <div class="todos todo4">4</div>
+          <div class="todos todo5">5</div>
+         
+         </div>
+      </div>
+    </main>
+    <script src="./public/index.js"></script>
+  </body>
 </html>
