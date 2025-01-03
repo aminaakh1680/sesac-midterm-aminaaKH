@@ -31,8 +31,8 @@ exports.readOne = async (req, res) => {
 exports.create = async (req, res) => {
   try {
     const newTodo = await Todo.create({
-      where: { title: title },
-      include: { done: done },
+      where: { title: req.body.title },
+      include: { done: req.body.done },
     });
     res.send(newTodo);
   } catch (err) {
